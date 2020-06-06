@@ -14,6 +14,10 @@ export default class Table extends Component
     constructor(props)
     {
         super(props);
+        this.state =
+        {
+            
+        }
     }
 
     render()
@@ -21,9 +25,9 @@ export default class Table extends Component
         return (
             <section>
                 <div className="buttons">
-                    <button id="add-row" onClick={this.handleClickEvents}>Add Row</button>
-                    <button id="add-column" onClick={this.handleClickEvents}>Add Column</button>
-                    <button id="select-color" onClick={this.handleClickEvents}>Select Color</button>
+                    <button onClick={this.handleAddRow}>Add Row</button>
+                    <button onClick={this.handleAddColumn}>Add Column</button>
+                    <button onClick={this.handleSelectColor}>Select Color</button>
                 </div>
                 
                 <table id="grid">
@@ -39,9 +43,18 @@ export default class Table extends Component
         );
     }
 
-    handleClickEvents = (event) =>
+    handleAddRow()
     {
-        const eventName = event.target.id;
-        console.log(eventName);
+
+    }
+
+    handleAddColumn()
+    {
+
+    }
+
+    handleSelectColor()
+    {
+
     }
 }
