@@ -10,5 +10,14 @@ import React, { Component } from 'react';
  */
 export default class ControlPanel extends Component
 {
-    
+    render()
+    {
+        return (
+            <section>
+                <button>Add Row</button>
+                <button>Add Column</button>
+                <button>Select Color</button>
+            </section>
+        );
+    }
 }
