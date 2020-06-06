@@ -19,6 +19,13 @@ export default class TableRow extends Component
             cells: props.cells
         }
     }
+
+    render()
+    {
+        return (
+            <tr></tr>
+        );
+    }
 }
 
 TableRow.propTypes =
