@@ -16,10 +16,7 @@ export default class Table extends Component
         super(props);
         this.state =
         {
-            rows: props.rows,
-            addRow: props.addRow,
-            addColumn: props.addColumn,
-            selectColor: props.selectColor
+            color: "gray"
         }
     }
 
@@ -28,9 +25,17 @@ export default class Table extends Component
         return (
             <section>
                 <div className="buttons">
-                    <button onClick={this.state.addRow}>Add Row</button>
-                    <button onClick={this.state.addColumn}>Add Column</button>
-                    <button onClick={this.state.selectColor}>Select Color</button>
+                    <button onClick={this.handleAddRow}>Add Row</button>
+                    <button onClick={this.handleAddColumn}>Add Column</button>
+                    <select onChange={this.handleSelectColor}>
+                        <option value="gray">Gray (Default)</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                    </select>
                 </div>
                 
                 <table id="grid">
@@ -45,12 +50,20 @@ export default class Table extends Component
             </section>
         );
     }
-}
 
-Table.propTypes =
-{
-    rows: PropTypes.array.isRequired,
-    addRow: PropTypes.func.isRequired,
-    addColumn: PropTypes.func.isRequired,
-    selectColor: PropTypes.func.isRequired
+    handleAddRow()
+    {
+
+    }
+
+    handleAddColumn()
+    {
+
+    }
+
+    handleSelectColor = (event) =>
+    {
+        this.setState({ color: event.target.value });
+        console.log(event.target.value);
+    }
 }

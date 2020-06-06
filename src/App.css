@@ -37,7 +37,8 @@ body::-webkit-scrollbar-thumb
     margin: 0 0 2rem 0;
 }
 
-button 
+button,
+select
 {
     background-color: darkslategray;
     border: none;
@@ -49,21 +50,30 @@ button
     margin: 5px 2px;
 }
 
-button:hover 
+button:hover,
+select:hover
 {
     background-color: darkcyan;
 }
 
-button:active 
+button:active,
+select:active
 {
     position: relative;
     top: 2px;
 }
 
 button:active,
-button:focus 
+button:focus,
+select:active,
+select:focus
 {
     outline: none;
+}
+
+option
+{
+    background-color: darkslategray;
 }
 
 /* Grid/Table */

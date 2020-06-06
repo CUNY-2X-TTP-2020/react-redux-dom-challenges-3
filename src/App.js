@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
-import ControlPanel from './components/control-panel/ControlPanel';
+import { Table } from './components';
 
 /**
  * A stateful class component which handles the rendering of these presentational components:
@@ -30,7 +29,7 @@ export default class App extends Component
             <div className="App">
                 <header className="App-header">
                     <h1>DOM Challenges 3</h1>
-                    <ControlPanel />
+                    <Table />
                 </header>
             </div>
         );
