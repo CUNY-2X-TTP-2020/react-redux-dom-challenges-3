@@ -14,10 +14,25 @@ export default class ControlPanel extends Component
     {
         return (
             <section>
-                <button>Add Row</button>
-                <button>Add Column</button>
-                <button>Select Color</button>
+                <button onClick={this.handleAddRow}>Add Row</button>
+                <button onClick={this.handleAddColumn}>Add Column</button>
+                <button onClick={this.handleSelectColor}>Select Color</button>
             </section>
         );
+    }
+
+    handleAddRow()
+    {
+
+    }
+
+    handleAddColumn()
+    {
+
+    }
+
+    handleSelectColor()
+    {
+
     }
 }
