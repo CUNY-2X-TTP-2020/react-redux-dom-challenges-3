@@ -17,7 +17,9 @@ export default class Table extends Component
         super(props);
         this.state =
         {
-            color: "gray"
+            color: "gray",
+            numOfCells: 1,
+            numOfRows: 0
         }
     }
 
@@ -40,25 +42,29 @@ export default class Table extends Component
                 </div>
                 
                 <table id="grid">
-                    <tr className="grid-row">
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                    </tr>
+                    <tbody>
+                        <tr className="grid-row">
+                            <TableCell color={this.state.color}/>
+                            <TableCell color={this.state.color}/>
+                            <TableCell color={this.state.color}/>
+                            <TableCell color={this.state.color}/>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
         );
     }
 
-    handleAddRow()
+    handleAddRow = () =>
     {
-
+        this.setState({ numOfRows: this.state.numOfRows + 1 });
+        console.log(this.state.numOfRows);
     }
 
-    handleAddColumn()
+    handleAddColumn = () =>
     {
-
+        this.setState({ numOfCells: this.state.numOfCells + 1 });
+        console.log(this.state.numOfCells);
     }
 
     handleSelectColor = (event) =>
