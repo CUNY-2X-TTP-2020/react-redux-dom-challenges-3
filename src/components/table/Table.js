@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * A presentational component which is rendered by ControlPanel
@@ -10,10 +11,28 @@ import React, { Component } from 'react';
  */
 export default class Table extends Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state =
+        {
+            addRow: props.addRow,
+            addColumn: props.addColumn,
+            selectColor: props.selectColor
+        }
+    }
+
     render()
     {
         return (
             <table></table>
         );
     }
+}
+
+Table.propTypes =
+{
+    addRow: PropTypes.func.isRequired,
+    addColumn: PropTypes.func.isRequired,
+    selectColor: PropTypes.func.isRequired
 }
