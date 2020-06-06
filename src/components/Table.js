@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { TableCell } from '.';
 
 /**
  * A presentational component which is rendered by ControlPanel
@@ -40,11 +41,10 @@ export default class Table extends Component
                 
                 <table id="grid">
                     <tr className="grid-row">
-                        <td className="grid-cell"></td>
-                        <td className="grid-cell"></td>
-                        <td className="grid-cell"></td>
-                        <td className="grid-cell"></td>
-                        <td className="grid-cell"></td>
+                        <TableCell color={this.state.color}/>
+                        <TableCell color={this.state.color}/>
+                        <TableCell color={this.state.color}/>
+                        <TableCell color={this.state.color}/>
                     </tr>
                 </table>
             </section>
@@ -64,6 +64,5 @@ export default class Table extends Component
     handleSelectColor = (event) =>
     {
         this.setState({ color: event.target.value });
-        console.log(event.target.value);
     }
 }
