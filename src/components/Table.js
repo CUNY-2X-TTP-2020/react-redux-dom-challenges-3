@@ -28,6 +28,7 @@ export default class Table extends Component
                     <button onClick={this.handleAddRow}>Add Row</button>
                     <button onClick={this.handleAddColumn}>Add Column</button>
                     <select onChange={this.handleSelectColor}>
+                        <option value="gray">Gray (Default)</option>
                         <option value="red">Red</option>
                         <option value="orange">Orange</option>
                         <option value="yellow">Yellow</option>
@@ -64,5 +65,6 @@ export default class Table extends Component
     handleSelectColor = (event) =>
     {
         this.setState({ color: event.target.value });
+        console.log(event.target.value);
     }
 }
