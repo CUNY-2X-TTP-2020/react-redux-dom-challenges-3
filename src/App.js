@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Table from './components/table/Table';
+import { Table } from './components';
 
 /**
  * A stateful class component which handles the rendering of these presentational components:
