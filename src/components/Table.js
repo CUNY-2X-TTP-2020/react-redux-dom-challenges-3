@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { TableCell } from '.';
 
 /**
- * A presentational component which is rendered by ControlPanel
+ * A presentational component which is rendered by App
  * 
  * The Table component will:
  * - be a parent of TableRow
- * - receive bound event handling functions from ControlPanel to handle the 
- * creation of rows and columns
+ * - handles button click events
+ * - handles the creation of rows and columns
+ * - handles color selection
  */
 export default class Table extends Component
 {
