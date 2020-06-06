@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { TableCell } from '.';
+import { TableRow } from '.';
 
 /**
- * A presentational component which is rendered by ControlPanel
+ * A presentational component which is rendered by App
  * 
  * The Table component will:
  * - be a parent of TableRow
- * - receive bound event handling functions from ControlPanel to handle the 
- * creation of rows and columns
+ * - handles button click events
+ * - handles the creation of rows and columns
+ * - handles color selection
  */
 export default class Table extends Component
 {
@@ -17,7 +17,9 @@ export default class Table extends Component
         super(props);
         this.state =
         {
-            color: "gray"
+            color: "gray",
+            numOfCells: 1,
+            numOfRows: 0
         }
     }
 
@@ -40,25 +42,34 @@ export default class Table extends Component
                 </div>
                 
                 <table id="grid">
-                    <tr className="grid-row">
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                        <TableCell color={this.state.color}/>
-                    </tr>
+                    <tbody>
+                        {this.produceRows(this.state.numOfRows, this.state.numOfCells)}
+                    </tbody>
                 </table>
             </section>
         );
     }
 
-    handleAddRow()
+    produceRows(numOfRows, numOfCells)
     {
+        let rows = [];
 
+        for(let i = 0; i < numOfRows; i++)
+        {
+            rows.push(<TableRow numOfCells={numOfCells} />);
+        }
+
+        return rows;
     }
 
-    handleAddColumn()
+    handleAddRow = () =>
     {
+        this.setState({ numOfRows: this.state.numOfRows + 1 });
+    }
 
+    handleAddColumn = () =>
+    {
+        this.setState({ numOfCells: this.state.numOfCells + 1 });
     }
 
     handleSelectColor = (event) =>
