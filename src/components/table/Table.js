@@ -16,6 +16,7 @@ export default class Table extends Component
         super(props);
         this.state =
         {
+            rows: props.rows,
             addRow: props.addRow,
             addColumn: props.addColumn,
             selectColor: props.selectColor
@@ -37,6 +38,7 @@ export default class Table extends Component
 
 Table.propTypes =
 {
+    rows: PropTypes.array.isRequired,
     addRow: PropTypes.func.isRequired,
     addColumn: PropTypes.func.isRequired,
     selectColor: PropTypes.func.isRequired
