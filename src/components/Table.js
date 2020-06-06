@@ -36,7 +36,6 @@ export default class Table extends Component
                         <option value="blue">Blue</option>
                         <option value="purple">Purple</option>
                     </select>
-                    <button onClick={this.handleSelectColor}>Select Color</button>
                 </div>
                 
                 <table id="grid">
