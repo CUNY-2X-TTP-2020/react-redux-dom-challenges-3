@@ -18,13 +18,17 @@ export default class TableCell extends Component
         {
             color: props.color
         }
-        this.handleClick = props.clickHandler.bind(this.handleClick);
+    }
+
+    handleClick = (event) =>
+    {
+
     }
 
     render()
     {
         return (
-            <td bgcolor={this.state.color} onClick={this.handleClick} />
+            <td color={this.state.color} onClick={this.handleClick} />
         );
     }
 }
