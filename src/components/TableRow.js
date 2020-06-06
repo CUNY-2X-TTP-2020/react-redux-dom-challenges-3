@@ -6,6 +6,7 @@ import React, { Component } from 'react';
  * The TableRow component will:
  * - receive props from Table
  * - be a parent of TableCell
+ * - handle the creation of TableCell components
  */
 export default class TableRow extends Component
 {
