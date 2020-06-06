@@ -31,7 +31,7 @@ export default class TableCell extends Component
     render()
     {
         return (
-            <td color={this.state.color} onClick={this.handleClick} />
+            <td color={this.state.color} onClick={this.handleClick}>Text</td>
         );
     }
 }
