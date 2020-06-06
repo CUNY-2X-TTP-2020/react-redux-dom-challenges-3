@@ -12,6 +12,11 @@ import { Table } from '../table';
  */
 export default class ControlPanel extends Component
 {
+    constructor()
+    {
+        super();
+    }
+
     render()
     {
         return (
