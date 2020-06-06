@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  * The TableCell component will:
  * - receive props from TableRow
  * - contain the state of its color
- * - listen for click events
+ * - handle click events
  */
 export default class TableCell extends Component
 {
@@ -20,6 +20,9 @@ export default class TableCell extends Component
         }
     }
 
+    /**
+     * Event handler that will update the cell's color upon click
+     */
     handleClick = (event) =>
     {
 
@@ -35,6 +38,5 @@ export default class TableCell extends Component
 
 TableCell.propTypes =
 {
-    color: PropTypes.string,
-    clickHandler: PropTypes.func
+    color: PropTypes.string
 }
