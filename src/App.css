@@ -68,6 +68,11 @@ button:focus
 
 /* Grid/Table */
 
+#grid
+{
+    margin: 2rem;
+}
+
 #grid,
 .grid-row,
 .grid-cell 
