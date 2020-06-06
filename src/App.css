@@ -64,7 +64,9 @@ select:active
 }
 
 button:active,
-button:focus 
+button:focus,
+select:active,
+select:focus
 {
     outline: none;
 }
