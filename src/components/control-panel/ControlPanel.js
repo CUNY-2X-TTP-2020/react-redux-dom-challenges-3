@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Table } from '../table';
+
 /**
  * An event handling component which is rendered by App
  * 
@@ -17,6 +19,7 @@ export default class ControlPanel extends Component
                 <button onClick={this.handleAddRow}>Add Row</button>
                 <button onClick={this.handleAddColumn}>Add Column</button>
                 <button onClick={this.handleSelectColor}>Select Color</button>
+                <Table />
             </section>
         );
     }
