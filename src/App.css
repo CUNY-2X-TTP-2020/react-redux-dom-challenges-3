@@ -71,6 +71,11 @@ select:focus
     outline: none;
 }
 
+option
+{
+    background-color: darkslategray;
+}
+
 /* Grid/Table */
 
 #grid
