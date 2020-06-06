@@ -21,9 +21,6 @@ export default class ControlPanel extends Component
     {
         return (
             <section>
-                <button onClick={this.handleAddRow}>Add Row</button>
-                <button onClick={this.handleAddColumn}>Add Column</button>
-                <button onClick={this.handleSelectColor}>Select Color</button>
                 <Table 
                     addRow={this.handleAddRow}
                     addColumn={this.handleAddColumn}

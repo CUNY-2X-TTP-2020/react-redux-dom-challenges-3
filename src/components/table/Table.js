@@ -25,7 +25,12 @@ export default class Table extends Component
     render()
     {
         return (
-            <table></table>
+            <section>
+                <button onClick={this.state.addRow}>Add Row</button>
+                <button onClick={this.state.addColumn}>Add Column</button>
+                <button onClick={this.state.selectColor}>Select Color</button>
+                <table></table>
+            </section>
         );
     }
 }
