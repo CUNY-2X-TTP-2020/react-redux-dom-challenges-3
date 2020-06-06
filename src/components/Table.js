@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TableCell } from '.';
+import { TableRow } from '.';
 
 /**
  * A presentational component which is rendered by App
@@ -43,28 +43,33 @@ export default class Table extends Component
                 
                 <table id="grid">
                     <tbody>
-                        <tr className="grid-row">
-                            <TableCell color={this.state.color}/>
-                            <TableCell color={this.state.color}/>
-                            <TableCell color={this.state.color}/>
-                            <TableCell color={this.state.color}/>
-                        </tr>
+                        {this.produceRows(this.state.numOfRows, this.state.numOfCells)}
                     </tbody>
                 </table>
             </section>
         );
     }
 
+    produceRows(numOfRows, numOfCells)
+    {
+        let rows = [];
+
+        for(let i = 0; i < numOfRows; i++)
+        {
+            rows.push(<TableRow numOfCells={numOfCells} />);
+        }
+
+        return rows;
+    }
+
     handleAddRow = () =>
     {
         this.setState({ numOfRows: this.state.numOfRows + 1 });
-        console.log(this.state.numOfRows);
     }
 
     handleAddColumn = () =>
     {
         this.setState({ numOfCells: this.state.numOfCells + 1 });
-        console.log(this.state.numOfCells);
     }
 
     handleSelectColor = (event) =>
