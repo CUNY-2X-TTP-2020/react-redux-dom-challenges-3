@@ -21,26 +21,12 @@ export default class ControlPanel extends Component
     {
         return (
             <section>
-                <Table 
-                    addRow={this.handleAddRow}
-                    addColumn={this.handleAddColumn}
-                    selectColor={this.handleSelectColor}
-                />
+                <Table handleClickEvents={this.handleClickEvents} />
             </section>
         );
     }
 
-    handleAddRow()
-    {
-
-    }
-
-    handleAddColumn()
-    {
-
-    }
-
-    handleSelectColor()
+    handleClickEvents = (event) =>
     {
 
     }

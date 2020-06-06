@@ -17,9 +17,7 @@ export default class Table extends Component
         this.state =
         {
             rows: props.rows,
-            addRow: props.addRow,
-            addColumn: props.addColumn,
-            selectColor: props.selectColor
+            handleClickEvents: props.handleClickEvents
         }
     }
 
@@ -28,9 +26,9 @@ export default class Table extends Component
         return (
             <section>
                 <div className="buttons">
-                    <button onClick={this.state.addRow}>Add Row</button>
-                    <button onClick={this.state.addColumn}>Add Column</button>
-                    <button onClick={this.state.selectColor}>Select Color</button>
+                    <button id="add-row" onClick={this.state.handleClickEvents}>Add Row</button>
+                    <button id="add-column" onClick={this.state.handleClickEvents}>Add Column</button>
+                    <button id="select-color" onClick={this.state.handleClickEvents}>Select Color</button>
                 </div>
                 
                 <table id="grid">
@@ -50,7 +48,5 @@ export default class Table extends Component
 Table.propTypes =
 {
     rows: PropTypes.array.isRequired,
-    addRow: PropTypes.func.isRequired,
-    addColumn: PropTypes.func.isRequired,
-    selectColor: PropTypes.func.isRequired
+    handleClickEvents: PropTypes.func.isRequired,
 }
