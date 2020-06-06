@@ -23,7 +23,7 @@ export default class TableRow extends Component
     render()
     {
         return (
-            <tr></tr>
+            <tr className="grid-row"></tr>
         );
     }
 }

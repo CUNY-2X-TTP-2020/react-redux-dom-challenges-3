@@ -27,10 +27,21 @@ export default class Table extends Component
     {
         return (
             <section>
-                <button onClick={this.state.addRow}>Add Row</button>
-                <button onClick={this.state.addColumn}>Add Column</button>
-                <button onClick={this.state.selectColor}>Select Color</button>
-                <table></table>
+                <div className="buttons">
+                    <button onClick={this.state.addRow}>Add Row</button>
+                    <button onClick={this.state.addColumn}>Add Column</button>
+                    <button onClick={this.state.selectColor}>Select Color</button>
+                </div>
+                
+                <table id="grid">
+                    <tr className="grid-row">
+                        <td className="grid-cell"></td>
+                        <td className="grid-cell"></td>
+                        <td className="grid-cell"></td>
+                        <td className="grid-cell"></td>
+                        <td className="grid-cell"></td>
+                    </tr>
+                </table>
             </section>
         );
     }
