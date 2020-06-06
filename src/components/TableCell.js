@@ -16,22 +16,22 @@ export default class TableCell extends Component
         super(props);
         this.state =
         {
-            color: props.color
+            color: "transparent"
         }
     }
 
     /**
      * Event handler that will update the cell's color upon click
      */
-    handleClick = (event) =>
+    handleClick = () =>
     {
-
+        this.setState({ color: this.props.color });
     }
-
+    
     render()
     {
         return (
-            <td className="grid-cell" color={this.state.color} onClick={this.handleClick}>Text</td>
+            <td className="grid-cell" bgcolor={this.state.color} onClick={this.handleClick} />
         );
     }
 }
