@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  * The TableCell component will:
  * - receive props from TableRow
  * - contain the state of its color
- * - handle click events
+ * - handle click events of the cell
  */
 export default class TableCell extends Component
 {
