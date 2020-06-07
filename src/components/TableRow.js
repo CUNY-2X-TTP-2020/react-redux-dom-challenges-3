@@ -7,7 +7,8 @@ import PropTypes from 'prop-types';
  * The TableRow component will:
  * - receive props from Table
  * - be a parent of TableCell
- * - handle the creation of TableCell components
+ * - render the cells (columns) of the row
+ * - push down color state from Table to TableCell
  */
 export default class TableRow extends Component
 {
