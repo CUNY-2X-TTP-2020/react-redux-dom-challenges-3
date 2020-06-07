@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { TableCell } from '.';
 
 /**
  * A presentational component which is rendered by Table

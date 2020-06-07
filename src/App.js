@@ -15,11 +15,7 @@ import { Table } from './components';
  * - A user can color in a single cell via click
  * 
  * The App component will:
- * - maintain the state of the grid as well as the state of the selected color
- * - have methods (bound event handler functions) on the class which will be passed down to children components
- * via props (the children components, presentational components, will have event listeners that will fire off
- * the bound event handler functions)
- * - render the dropdown menu as well as the Table component (presentational component)
+ * - create a single table component
  */
 export default class App extends Component
 {
