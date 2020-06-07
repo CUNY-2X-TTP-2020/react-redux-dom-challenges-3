@@ -17,6 +17,7 @@ export default class TableRow extends Component
         super(props);
         this.state =
         {
+            key: props.key,
             cells: props.cells,
             color: props.color
         }
@@ -34,6 +35,7 @@ export default class TableRow extends Component
 
 TableRow.propTypes =
 {
+    key: PropTypes.string.isRequired,
     cells: PropTypes.array.isRequired,
     color: PropTypes.string.isRequired
 }

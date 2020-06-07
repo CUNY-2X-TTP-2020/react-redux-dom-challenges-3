@@ -16,6 +16,7 @@ export default class TableCell extends Component
         super(props);
         this.state =
         {
+            key: props.key,
             color: "transparent"
         }
     }
@@ -38,5 +39,6 @@ export default class TableCell extends Component
 
 TableCell.propTypes =
 {
+    key: PropTypes.string.isRequired,
     color: PropTypes.string
 }

@@ -60,9 +60,9 @@ export default class Table extends Component
 
             for(let j = 0; j < numOfCells; j++)
             {
-                columns.push(<TableCell color={this.state.color} />);
+                columns.push(<TableCell key={i+j.toString()} color={this.state.color} />);
             }
-            rows.push(<TableRow cells={columns} color={this.state.color} />);
+            rows.push(<TableRow key={i.toString()} cells={columns} color={this.state.color} />);
         }
 
         return rows;
