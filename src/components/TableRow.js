@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { TableCell } from '.';
 
 /**
  * A presentational component which is rendered by Table
@@ -16,19 +17,23 @@ export default class TableRow extends Component
         super(props);
         this.state =
         {
-            cells: props.cells
+            cells: props.cells,
+            color: props.color
         }
     }
 
     render()
     {
         return (
-            <tr className="grid-row"></tr>
+            <tr className="grid-row">
+                {this.props.cells}
+            </tr>
         );
     }
 }
 
 TableRow.propTypes =
 {
-    cells: PropTypes.array.isRequired
+    cells: PropTypes.array.isRequired,
+    color: PropTypes.string.isRequired
 }

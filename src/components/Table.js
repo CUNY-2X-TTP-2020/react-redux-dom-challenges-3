@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TableRow } from '.';
+import { TableRow, TableCell } from '.';
 
 /**
  * A presentational component which is rendered by App
@@ -43,20 +43,26 @@ export default class Table extends Component
                 
                 <table id="grid">
                     <tbody>
-                        {this.produceRows(this.state.numOfRows, this.state.numOfCells)}
+                        {this.produceTable(this.state.numOfRows, this.state.numOfCells)}
                     </tbody>
                 </table>
             </section>
         );
     }
 
-    produceRows(numOfRows, numOfCells)
+    produceTable(numOfRows, numOfCells)
     {
         let rows = [];
 
         for(let i = 0; i < numOfRows; i++)
         {
-            rows.push(<TableRow numOfCells={numOfCells} />);
+            let columns = [];
+
+            for(let j = 0; j < numOfCells; j++)
+            {
+                columns.push(<TableCell color={this.state.color} />);
+            }
+            rows.push(<TableRow cells={columns} color={this.state.color} />);
         }
 
         return rows;
