@@ -10,7 +10,11 @@ import React from "react";
 const TableCellComponent = (props) =>
 {
     return (
-        <td className="grid-cell" bgcolor={props.color} onClick={props.onClick} />
+        <td 
+            className="grid-cell" 
+            bgcolor={props.color} 
+            onClick={event => props.onClick(event)} 
+        />
     );
 };
 
