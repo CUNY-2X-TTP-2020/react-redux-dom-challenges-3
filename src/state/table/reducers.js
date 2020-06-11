@@ -8,7 +8,8 @@ const initialState =
 {
     color: "gray",
     numOfCells: 1,
-    numOfRows: 0
+    numOfRows: 0,
+    rows: []
 }
 
 // REDUCER

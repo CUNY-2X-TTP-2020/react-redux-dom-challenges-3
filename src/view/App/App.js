@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import TableContainer from "../Table/TableContainer";
+import { TableContainer } from "../Table";
 
 /**
  * A stateful class component which handles the rendering of these presentational components:
