@@ -20,6 +20,7 @@ class TableContainer extends Component
 // Map state to props
 function mapState(state)
 {
+    console.log(state);
     return { 
         color: state.color,
         numOfCells: state.numOfCells,
