@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-// Smart container
+/**
+ * A smart container component which will connect to the Redux store and 
+ * map states and dispatches for other components to use
+ */
 class TableContainer extends Component
 {
     render()
@@ -18,17 +21,19 @@ class TableContainer extends Component
 function mapState(state)
 {
     return { 
-        color: "gray",
-        numOfCells: 1,
-        numOfRows: 0
+        color: state.color,
+        numOfCells: state.numOfCells,
+        numOfRows: state.numOfRows
     };
 }
 
 // Map dispatch to props
 function mapDispatch(dispatch)
 {
+    return {
 
+    };
 }
 
 // Export our store-connected component
-export default TableContainer;
+export default connect(mapState, mapDispatch)(TableContainer);
