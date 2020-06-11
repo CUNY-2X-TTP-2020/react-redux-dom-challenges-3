@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { createTable, addRow, addColumn, selectColor } from "../../state";
+import TableComponent from "./TableComponent";
 
 /**
  * A smart container component which will connect to the Redux store and 
@@ -14,7 +15,11 @@ class TableContainer extends Component
         console.log(this.props);
         return (
             <section>
-
+                <TableComponent 
+                    produceTable={this.props.onTableCreate}
+                    numOfRows={this.props.numOfRows}
+                    numOfCells={this.props.numOfCells}
+                />
             </section>
         );
     }
@@ -23,7 +28,6 @@ class TableContainer extends Component
 // Map state to props
 function mapState(state)
 {
-    console.log(state);
     return { 
         color: state.table.color,
         numOfCells: state.table.numOfCells,
