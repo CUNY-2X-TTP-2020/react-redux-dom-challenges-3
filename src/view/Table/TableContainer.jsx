@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { createTable, addRow, addColumn, selectColor } from "../../state";
+import { createTable } from "../../state";
 
 /**
  * A smart container component which will connect to the Redux store and 
@@ -24,7 +24,6 @@ class TableContainer extends Component
 function mapState(state)
 {
     return { 
-        color: state.table.color,
         numOfCells: state.table.numOfCells,
         numOfRows: state.table.numOfRows,
         rows: state.table.rows
@@ -36,9 +35,6 @@ function mapDispatch(dispatch)
 {
     return {
         onTableCreate: (numOfRows, numOfCells) => dispatch(createTable(numOfRows, numOfCells)),
-        onRowAdd: () => dispatch(addRow()),
-        onColumnAdd: () => dispatch(addColumn()),
-        onColorSelect: (color) => dispatch(selectColor(color))
     };
 }
 

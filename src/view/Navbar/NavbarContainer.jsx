@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { selectColor } from "../../state";
+import { addRow, addColumn, selectColor } from "../../state";
 
 class NavbarContainer extends Component
 {
@@ -25,6 +25,8 @@ function mapState(state)
 function mapDispatch(dispatch)
 {
     return {
+        onRowAdd: () => dispatch(addRow()),
+        onColumnAdd: () => dispatch(addColumn()),
         onColorSelect: (color) => dispatch(selectColor(color))
     };
 }
