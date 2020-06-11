@@ -32,7 +32,7 @@ const reducer = (state = initialState, action) =>
 
             return {
                 ...state,
-                table: rows
+                rows
             };
 
         case types.ADD_ROW:
