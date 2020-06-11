@@ -1,12 +1,12 @@
 import React from "react";
 
-const TableComponent = (props) =>
+const NavbarComponent = (props) =>
 {
     return (
         <section>
-            Table
+            Navbar
         </section>
     );
 }
 
-export default TableComponent;
+export default NavbarComponent;
