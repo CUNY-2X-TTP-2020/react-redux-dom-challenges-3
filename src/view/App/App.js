@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { TableContainer } from "../Table";
+import AppContainer from "./AppContainer";
 
 /**
  * A stateful class component which handles the rendering of these presentational components:
@@ -24,7 +24,7 @@ function App()
         <div className="App">
             <header className="App-header">
                 <h1>DOM Challenges 3 (Redux)</h1>
-                <TableContainer />
+                <AppContainer />
             </header>
         </div>
     );
