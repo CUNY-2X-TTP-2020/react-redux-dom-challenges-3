@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import NavbarComponent from "../Navbar/NavbarComponent";
-import TableComponent from "../Table";
+import { NavbarComponent } from "../Navbar";
+import { TableComponent } from "../Table";
 
 import { createTable, addRow, addColumn, selectColor } from "../../state";
 
