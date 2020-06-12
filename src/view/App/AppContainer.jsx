@@ -16,11 +16,7 @@ class AppContainer extends Component
     {
         return (
             <>
-                <NavbarComponent
-                    addRow={this.props.addRow}
-                    addColumn={this.props.addColumn}
-                    selectColor={this.props.selectColor}
-                />
+                <NavbarComponent {...this.props} />
                 <TableComponent {...this.props} />
             </>
         );
