@@ -1,21 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 
 /**
  * A presentational component which renders a single table cell
  * 
  * The props it receives are:
  * - color
- * - event handler for clicking
  */
-const TableCellComponent = (props) =>
+class TableCellComponent extends Component
 {
-    return (
-        <td 
-            className="grid-cell" 
-            bgcolor={props.color} 
-            onClick={event => props.onClick(event)} 
-        />
-    );
+    constructor(props)
+    {
+        super(props);
+        this.state =
+        {
+            color: "transparent"
+        };
+    }
+
+    handleClick = () =>
+    {
+        this.setState({ color: this.props.color });
+    }
+
+    render()
+    {
+        return (
+            <td 
+                className="grid-cell" 
+                bgcolor={this.state.color} 
+                onClick={this.handleClick} 
+            />
+        );
+    }
 };
 
 export default TableCellComponent;
