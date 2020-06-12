@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * A presentational component which renders the entirety of the table,
@@ -20,6 +21,11 @@ const TableComponent = (props) =>
             </table>
         </section>
     );
+}
+
+TableComponent.propTypes =
+{
+    rows: PropTypes.array.isRequired
 }
 
 export default TableComponent;
