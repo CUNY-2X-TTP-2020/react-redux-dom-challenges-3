@@ -11,7 +11,7 @@ import React from "react";
 const TableRowComponent = (props) =>
 {
     return (
-        <tr>
+        <tr className="grid-row">
             {props.cells}
         </tr>
     );
