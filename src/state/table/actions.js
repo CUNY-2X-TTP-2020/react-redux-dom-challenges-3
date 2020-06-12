@@ -1,7 +1,7 @@
 import types from "./action_types";
 
 // ACTION CREATORS
-export function createTable(numOfRows = 10, numOfCells = 10)
+export function createTable(numOfRows, numOfCells)
 {
     return { 
         type: types.CREATE_TABLE, 
