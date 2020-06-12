@@ -4,8 +4,18 @@ const NavbarComponent = (props) =>
 {
     return (
         <section>
-            <button onClick={props.addRow}>Add Row</button>
-            <button onClick={props.addColumn}>Add Column</button>
+            <button onClick={() => 
+            { 
+                props.addRow(); 
+                props.createTable(props.numOfRows, props.numOfCells);
+            }}>Add Row</button>
+
+            <button onClick={() => 
+            { 
+                props.addColumn(); 
+                props.createTable(props.numOfRows, props.numOfCells);
+            }}>Add Column</button>
+
             <select onChange={event => props.selectColor(event.target.value)}>
                 <option value="gray">Gray (Default)</option>
                 <option value="red">Red</option>
