@@ -38,10 +38,10 @@ function mapState(state)
 function mapDispatch(dispatch)
 {
     return {
-        onTableCreate: (numOfRows, numOfCells) => dispatch(createTable(numOfRows, numOfCells)),
-        onRowAdd: () => dispatch(addRow()),
-        onColumnAdd: () => dispatch(addColumn()),
-        onColorSelect: (color) => dispatch(selectColor(color))
+        createTable: (numOfRows, numOfCells) => dispatch(createTable(numOfRows, numOfCells)),
+        addRow: () => dispatch(addRow()),
+        addColumn: () => dispatch(addColumn()),
+        selectColor: (color) => dispatch(selectColor(color))
     };
 }
 
