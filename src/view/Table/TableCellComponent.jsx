@@ -4,7 +4,8 @@ import React, { Component } from "react";
  * A presentational component which renders a single table cell
  * 
  * The props it receives are:
- * - color
+ * - key: unique to make React happy
+ * - color: to be filled into the cell upon user click event
  */
 class TableCellComponent extends Component
 {
@@ -17,6 +18,9 @@ class TableCellComponent extends Component
         };
     }
 
+    /**
+     * Event handler that will update the cell's color upon click
+     */
     handleClick = () =>
     {
         this.setState({ color: this.props.color });
