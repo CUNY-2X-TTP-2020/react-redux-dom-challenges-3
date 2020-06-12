@@ -29,7 +29,6 @@ const reducer = (state = initialState, action) =>
                     columns.push(<TableCellComponent 
                         key={i+j.toString()} 
                         color={state.color} 
-                        handleClick={state.handleClick}
                     />);
                 }
                 rows.push(<TableRowComponent key={i.toString()} cells={columns} />);
