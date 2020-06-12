@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { Table } from './components';
+
+import AppContainer from "./AppContainer";
 
 /**
  * A stateful class component which handles the rendering of these presentational components:
@@ -17,17 +18,16 @@ import { Table } from './components';
  * The App component will:
  * - create a single table component
  */
-export default class App extends Component
+function App()
 {
-    render()
-    {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <h1>DOM Challenges 3</h1>
-                    <Table />
-                </header>
-            </div>
-        );
-    }
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>DOM Challenges 3 (Redux)</h1>
+                <AppContainer />
+            </header>
+        </div>
+    );
 }
+
+export default App;
