@@ -4,7 +4,7 @@ const TableComponent = (props) =>
 {
     return (
         <section>
-            <table>
+            <table id="grid">
                 <tbody>
                     {props.rows}
                 </tbody>
