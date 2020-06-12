@@ -4,7 +4,11 @@ const TableComponent = (props) =>
 {
     return (
         <section>
-            Table
+            <table>
+                <tbody>
+                    {props.rows}
+                </tbody>
+            </table>
         </section>
     );
 }
