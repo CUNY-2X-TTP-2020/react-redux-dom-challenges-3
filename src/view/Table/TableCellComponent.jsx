@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 /**
  * A presentational component which renders a single table cell
@@ -37,5 +38,11 @@ class TableCellComponent extends Component
         );
     }
 };
+
+TableCellComponent.propTypes =
+{
+    key: PropTypes.string.isRequired,
+    color: PropTypes.string
+}
 
 export default TableCellComponent;
