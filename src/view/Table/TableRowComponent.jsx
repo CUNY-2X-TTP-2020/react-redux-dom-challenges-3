@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * A presentational component which renders a single table row.
@@ -15,6 +16,12 @@ const TableRowComponent = (props) =>
             {props.cells}
         </tr>
     );
+}
+
+TableRowComponent.propTypes =
+{
+    key: PropTypes.string.isRequired,
+    cells: PropTypes.array.isRequired
 }
 
 export default TableRowComponent;
