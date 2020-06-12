@@ -8,7 +8,7 @@ import { createTable, addRow, addColumn, selectColor } from "../../state";
 
 /**
  * A smart container component that will be rendered by App, and will 
- * render NavbarContainer and TableContainer
+ * render NavbarComponent and TableComponent
  */
 class AppContainer extends Component
 {
