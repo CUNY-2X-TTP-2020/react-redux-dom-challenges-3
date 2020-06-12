@@ -51,7 +51,7 @@ const reducer = (state = initialState, action) =>
         case types.SELECT_COLOR:
             return {
                 ...state,
-                color: action.selectedColor
+                color: action.color
             };
 
         default: return state;
