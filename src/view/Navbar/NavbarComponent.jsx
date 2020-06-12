@@ -16,7 +16,11 @@ const NavbarComponent = (props) =>
                 props.createTable(props.numOfRows, props.numOfCells);
             }}>Add Column</button>
 
-            <select onChange={event => props.selectColor(event.target.value)}>
+            <select onChange={event => 
+            {
+                props.selectColor(event.target.value);
+                props.createTable(props.numOfRows, props.numOfCells);
+            }}>
                 <option value="gray">Gray (Default)</option>
                 <option value="red">Red</option>
                 <option value="orange">Orange</option>
