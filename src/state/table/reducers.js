@@ -26,35 +26,27 @@ const reducer = (state = initialState, action) =>
 
                 for(let j = 0; j < state.numOfCells; j++)
                 {
-                    columns.push(<TableCellComponent />);
+                    columns.push(<TableCellComponent 
+                        key={i+j.toString()} 
+                        color={state.color} 
+                        handleClick={state.handleClick}
+                    />);
                 }
-                rows.push(<TableRowComponent />);
+                rows.push(<TableRowComponent key={i.toString()} cells={columns} />);
             }
-
-            return {
-                ...state,
-                rows
-            };
+            return { ...state, rows };
 
         case types.ADD_ROW:
-            return {
-                ...state,
-                numOfRows: state.numOfRows + 1
-            };
+            return { ...state, numOfRows: state.numOfRows + 1 };
 
         case types.ADD_COLUMN:
-            return {
-                ...state,
-                numOfCells: state.numOfCells + 1
-            };
+            return { ...state, numOfCells: state.numOfCells + 1 };
 
         case types.SELECT_COLOR:
-            return {
-                ...state,
-                color: action.color
-            };
+            return { ...state, color: action.color }
 
-        default: return state;
+        default: 
+            return state;
     }
 };
 
