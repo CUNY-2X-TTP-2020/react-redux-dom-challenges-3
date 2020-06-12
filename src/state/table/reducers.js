@@ -28,10 +28,11 @@ const reducer = (state = initialState, action) =>
                 {
                     columns.push(<TableCellComponent 
                         key={i+j.toString()} 
+                        id={i+j.toString()}
                         color={state.color} 
                     />);
                 }
-                rows.push(<TableRowComponent key={i.toString()} cells={columns} />);
+                rows.push(<TableRowComponent key={i.toString()} id={i.toString()} cells={columns} />);
             }
             return { ...state, rows };
 

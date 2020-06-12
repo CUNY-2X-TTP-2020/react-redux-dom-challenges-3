@@ -20,7 +20,7 @@ const TableRowComponent = (props) =>
 
 TableRowComponent.propTypes =
 {
-    key: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     cells: PropTypes.array.isRequired
 }
 

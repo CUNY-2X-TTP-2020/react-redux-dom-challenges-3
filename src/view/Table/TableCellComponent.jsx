@@ -41,7 +41,7 @@ class TableCellComponent extends Component
 
 TableCellComponent.propTypes =
 {
-    key: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     color: PropTypes.string
 }
 
