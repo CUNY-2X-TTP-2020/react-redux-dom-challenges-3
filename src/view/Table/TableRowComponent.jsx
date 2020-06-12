@@ -5,8 +5,8 @@ import React from "react";
  * Each row contains X amount of cells
  * 
  * The props it receives are:
- * - color
- * - array of cells to render
+ * - key: unique to make React happy
+ * - cells: array of individual cells per row to make up the columns
  */
 const TableRowComponent = (props) =>
 {
